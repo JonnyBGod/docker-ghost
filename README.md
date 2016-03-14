@@ -45,14 +45,15 @@ docker run --name some-ghost --volumes-from some-ghost-data jonnybgod/ghost
 * `MYSQL_HOST`: specify the database endpoint
 * `MYSQL_USER`: specify the database username
 * `MYSQL_PASSWORD`: specify the database password
-* `MYSQL_DB`: specify the database name
+* `MYSQL_DATABASE`: specify the database name
 
 or
 
 * `POSTGRES_HOST`: specify the database endpoint
+* `POSTGRES_PORT`: specify the database port
 * `POSTGRES_USER`: specify the database username
 * `POSTGRES_PASSWORD`: specify the database password
-* `POSTGRES_DB`: specify the database name
+* `POSTGRES_DATABASE`: specify the database name
 
 #### s3 storage (defaults to false meaning no storage):
 * `S3_ACCESS_KEY_ID`: specify the AWS IAM user key_id
@@ -75,10 +76,10 @@ blog:
   command: npm start --production
   environment:
     URL: http://example.com
-    MYSQL_HOST: <YOUR_MYSQL_HOST>:<YOUR_MYSQL_PORT>
+    MYSQL_HOST: <YOUR_MYSQL_HOST>
     MYSQL_USER: <YOUR_MYSQL_USER>
     MYSQL_PASSWORD: <YOUR_MYSQL_PASSWORD>
-    MYSQL_DB: <YOUR_MYSQL_DB>
+    MYSQL_DATABASE: <YOUR_MYSQL_DB>
     S3_ACCESS_KEY_ID: <YOUR_S3_ACCESS_KEY_ID>
     S3_ACCESS_SECRET_KEY: <YOUR_S3_ACCESS_SECRET_KEY>
     S3_BUCKET_NAME: <YOUR_S3_BUCKET_NAME>
