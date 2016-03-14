@@ -36,12 +36,12 @@ Alternatively you can use a data container that has a volume that points to /var
 docker run --name some-ghost --volumes-from some-ghost-data jonnybgod/ghost
 ```
 
-## Optional Variables:
+### Optional Variables:
 * `URL`: specify the elasticsearch index (default: http://localhost:2368)
 * `HOST`: specify the IP address that Ghost should listen on (default: 0.0.0.0)
 * `PORT`: specify the port number that Ghost should listen on (default: 2368)
 
-### database (dafaults to local sqlite):
+#### database (dafaults to local sqlite):
 * `MYSQL_HOST`: specify the database endpoint
 * `MYSQL_USER`: specify the database username
 * `MYSQL_PASSWORD`: specify the database password
@@ -54,20 +54,20 @@ or
 * `POSTGRES_PASSWORD`: specify the database password
 * `POSTGRES_DB`: specify the database name
 
-### s3 storage (defaults to false meaning no storage):
+#### s3 storage (defaults to false meaning no storage):
 * `S3_ACCESS_KEY_ID`: specify the AWS IAM user key_id
 * `S3_ACCESS_SECRET_KEY`: specify the AWS IAM user secret_key
 * `S3_BUCKET_NAME`: specify the AWS S3 bucket name
 * `S3_REGION`: specify the AWS S3 region
 
-### email (defaults to false meaning no emails):
+#### email (defaults to false meaning no emails):
 * `MAIL_SERVICE`: specify email service
 * `MAIL_USER`: specify email service smtp username
 * `MAIL_PASSWORD`: specify email service smtp password
 
 > http://support.ghost.org/config/#database
 
-### The docker-compose service definition should look as follows:
+#### The docker-compose service definition should look as follows:
 
 ```yalm
 blog:

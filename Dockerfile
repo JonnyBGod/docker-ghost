@@ -12,7 +12,7 @@ RUN apk --no-cache add --virtual build-dependencies make gcc g++ python wget ca-
 	&& chown -R ghost.ghost * \
 	&& apk del build-dependencies \
 	&& npm cache clean \
-	&& rm -rf /tmp/* /root/.npm /root/.node-gyp /var/cache/apk/*
+	&& rm -rf /tmp/* /root/.node-gyp /var/cache/apk/*
 
 WORKDIR /ghost
 ADD ./config.js ./config.js
